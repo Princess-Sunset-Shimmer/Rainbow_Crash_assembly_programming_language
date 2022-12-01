@@ -3,20 +3,6 @@
 #### After include RV64i.c, then you can write your C code in assembly style like below:
 
 ```c
-int
-main    (void)
-{
-        stack   (str,0x10)
-        init    (content1,0x6d6966203a706c6d)
-        init    (content2,0x000a)                        // "mlp: fim\n"
-        sd      (content1,0,str)
-        sh      (content2,0x8,str)
-#define a1      ((char*)str)
-        call    (printf,a1)
-#define rv      (0)
-        ret     (rv)
-}
-                                                         # undef rv
-                                                         # undef a1
+
 ```
 #### AWESOME, COOL right?
