@@ -11,12 +11,12 @@ main    (void)
         init    (content2,0x000a)                        // "mlp: fim\n"
         sd      (content1,0,str)
         sh      (content2,0x8,str)
-#define a0      ((char*)str)
-        call    (printf)                                 a0 go
-                                                         #undef a0
+#define a1      ((char*)str)
+        call    (printf,a1)
 #define rv      (0)
         ret     (rv)
 }
-                                                         #undef rv
+                                                         # undef rv
+                                                         # undef a1
 ```
 #### AWESOME, COOL right?
