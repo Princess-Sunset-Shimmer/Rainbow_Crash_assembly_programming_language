@@ -62,31 +62,19 @@
 #define bltu(r0,r1,imm) if(r0<r1)goto imm;
 #define bge(r0,r1,imm) if((int64_t)r0>=(int64_t)r1)goto imm;
 #define bgeu(r0,r1,imm) if(r0>=r1)goto imm;
-// TOOL_local
-#define init(rd,exp) register uint64_t rd=exp;
-#define arg register uint64_t
+// TOOL_allocation
 #define stack(sp,s) uint8_t sp[s];
-// TOOL_global
 #define string(c) []=c;
 #define zero(s) [s];
-#define data [args...]={args};
-#define func ;
-// TOOL_addressing
-#define m8(imm,p) *(uint8_t*)((int16_t)imm+p)
-#define m8s(imm,p) *(int8_t*)((int16_t)imm+p)
-#define m16(imm,p) *(uint16_t*)((int16_t)imm+p)
-#define m16s(imm,p) *(int16_t*)((int16_t)imm+p)
-#define m32(imm,p) *(uint32_t*)((int16_t)imm+p)
-#define m32s(imm,p) *(int32_t*)((int16_t)imm+p)
-#define m64(imm,p) *(uint64_t*)((int16_t)imm+p)
-#define m64s(imm,p) *(int64_t*)((int16_t)imm+p)
+#define data(args...) []={args};
 // TOOL_type
 #define byte uint8_t
 #define half uint16_t
 #define word uint32_t
 #define dword uint64_t
-#define qword __uint128_t
+#define ARG register uint64_t
+#define VAR register uint64_t
+#define RV register uint64_t rv =
 #define gp uint64_t
 #define sp uint64_t
-#define s int64_t
-#define XLEN 0x40
+#define func ;
