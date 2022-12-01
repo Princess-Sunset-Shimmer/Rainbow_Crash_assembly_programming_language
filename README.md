@@ -5,8 +5,7 @@
 ```c
 dword
 main    (void)
-{
-        stack   (str,0x10)
+{       stack   (str,0x10)
         li      (VAR content1,0x6d6966203a706c6d)
         li      (VAR content2,0x000a)                       // "mlp: fim\n"
         sd      (content1,0,str)
