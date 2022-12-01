@@ -53,8 +53,7 @@
 #define sd(r0,imm,p) *(uint64_t*)((int16_t)imm+p)=r0;
 // FLOW_jump
 #define j(imm) goto imm;
-#define call(f) f(
-#define go );
+#define call(f,args...) f(args);
 #define ret(rv) return rv;
 // FLOW_branch
 #define beq(r0,r1,imm) if(r0==r1)goto imm;
@@ -70,8 +69,7 @@
 // TOOL_global
 #define string(c) []=c;
 #define zero(s) [s];
-#define data []={
-#define end };
+#define data [args...]={args};
 #define func ;
 // TOOL_addressing
 #define m8(imm,p) *(uint8_t*)((int16_t)imm+p)
