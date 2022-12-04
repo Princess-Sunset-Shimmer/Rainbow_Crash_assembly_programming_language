@@ -53,8 +53,8 @@
 #define sd(r0,imm,p) *(uint64_t*)((int16_t)imm+p)=r0;
 // FLOW_jump
 #define j(imm) goto imm;
-#define call(f,args...) f(args);
-#define ret(rv) return rv;
+#define call(i,args...) i(args);
+#define ret(i) return i;
 // FLOW_branch
 #define beq(r0,r1,imm) if(r0==r1)goto imm;
 #define bne(r0,r1,imm) if(r0!=r1)goto imm;
@@ -67,14 +67,13 @@
 #define string(c) []=c;
 #define zero(s) [s];
 #define data(args...) []={args};
-// TOOL_type
-#define byte uint8_t
-#define half uint16_t
-#define word uint32_t
-#define dword uint64_t
+// TOOL_note
+#define BYTE uint8_t
+#define HALF uint16_t
+#define WORD uint32_t
+#define DWORD uint64_t
+#define PTR uint64_t
 #define ARG register uint64_t
 #define VAR register uint64_t
-#define RV register uint64_t rv =
-#define gp uint64_t
-#define sp uint64_t
-#define func ;
+#define $(i) register uint64_t i=
+#define fn ;
