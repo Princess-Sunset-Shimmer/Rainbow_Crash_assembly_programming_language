@@ -63,7 +63,7 @@
 #define bge(r0,r1,imm) if((int64_t)r0>=(int64_t)r1)goto imm;
 #define bgeu(r0,r1,imm) if(r0>=r1)goto imm;
 // TOOL_allocation
-#define stack(sp,s) uint8_t sp[s];
+#define stack(p,s) uint8_t p[s];
 #define string(c) []=c;
 #define zero(s) [s];
 #define data(args...) []={args};
