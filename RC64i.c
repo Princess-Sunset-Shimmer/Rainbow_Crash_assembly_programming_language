@@ -54,7 +54,7 @@
 // FLOW_jump
 #define j(imm) goto imm;
 #define call(i,args...) i(args);
-#define ret(i) return i;
+#define ret(i) return i;}
 // FLOW_branch
 #define beq(r0,r1,imm) if(r0==r1)goto imm;
 #define bne(r0,r1,imm) if(r0!=r1)goto imm;
@@ -63,7 +63,7 @@
 #define bge(r0,r1,imm) if((int64_t)r0>=(int64_t)r1)goto imm;
 #define bgeu(r0,r1,imm) if(r0>=r1)goto imm;
 // TOOL_allocation
-#define stack(p,s) uint8_t p[s];
+#define stack(p,s) {uint8_t p[s];
 #define string(c) []=c;
 #define zero(s) [s];
 #define data(args...) []={args};
@@ -73,7 +73,6 @@
 #define WORD uint32_t
 #define DWORD uint64_t
 #define PTR uint64_t
-#define ARG register uint64_t
-#define VAR register uint64_t
-#define $(i) register uint64_t i=
+#define $ register uint64_t
+#define RV(i) register uint64_t i=
 #define fn ;
