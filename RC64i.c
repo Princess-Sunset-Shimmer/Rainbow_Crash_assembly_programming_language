@@ -74,5 +74,5 @@
 #define DWORD uint64_t
 #define PTR uint64_t
 #define $ register uint64_t
-#define RV(i) register uint64_t i=
+#define RV(i) i=
 #define fn ;
