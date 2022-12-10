@@ -4,15 +4,15 @@
 
 ```c
 DWORD
-main    (void)                                          {
+main    (void)
         stack   (str,0x10)
-        li      (VAR content0,0x6d6966203a706c6d)
-        li      (VAR content1,0x000a)                   // "mlp: fim\n"
+        li      ($ content0,0x6d6966203a706c6d)
+        li      ($ content1,0x000a)                   // "mlp: fim\n"
         sd      (content0,0,str)
         sh      (content1,0x8,str)
-        mv      (ARG a0,(PTR)str)
+        mv      ($ a0,(PTR)str)
         call    (printf,(char*)a0)
-        li      (ARG value,0)
-        ret     (value)                                 }
+        li      (a0,0)
+        ret     (a0)
 ```
 #### AWESOME, COOL right?
