@@ -10,7 +10,7 @@ main    (void)
         li      ($ content1,0x000a)                   // "mlp: fim\n"
         sd      (content0,0,str)
         sh      (content1,0x8,str)
-        mv      ($ a0,(PTR)str)
+        mv      ($ a0,PTR str)
         call    (printf,(char*)a0)
         li      (a0,0)
         ret     (a0)
