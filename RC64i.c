@@ -1,3 +1,4 @@
+#include<stdint.h>
 // ALU_addition
 #define add(rd,r0,r1) rd=r0+r1;
 #define addi(rd,r0,imm) rd=r0+(int16_t)imm;
@@ -72,7 +73,8 @@
 #define HALF uint16_t
 #define WORD uint32_t
 #define DWORD uint64_t
-#define PTR uint64_t
+#define PTR (uint64_t)
 #define $ register uint64_t
 #define RV(i) i=
+#define x0 0
 #define fn ;
