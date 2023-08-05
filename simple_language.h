@@ -114,6 +114,14 @@
 #define half value
 #define word long
 #define doub quad
+#define ON 1
+#define OFF 0
+#define TRUE 1
+#define FALSE 0
+#define NIL 0
+#define NULL 0
+#define NONE 0
+#define ZERO 0
 .intel_syntax noprefix
 /*
     ahead   a0, a1
