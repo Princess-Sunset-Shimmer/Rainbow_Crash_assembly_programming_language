@@ -116,6 +116,10 @@
 #define doub quad
 #define ON 1
 #define OFF 0
+#define ENABLE 1
+#define DISABLE 0
+#define VALID 1
+#define INVALID 0
 #define TRUE 1
 #define FALSE 0
 #define NIL 0
