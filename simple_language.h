@@ -3,6 +3,7 @@
 #define a2 rsi
 #define a3 rdx
 #define a4 rcx
+#define shamt_full rcx
 #define a5 r8
 #define a6 r9
 #define a7 r10
@@ -20,6 +21,7 @@
 #define a2_byte sil
 #define a3_byte dl
 #define a4_byte cl
+#define shamt cl
 #define a5_byte r8b
 #define a6_byte r9b
 #define a7_byte r10b
