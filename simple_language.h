@@ -138,15 +138,15 @@
     compare a0, 1
     borrow  a0, a1
     negate  a0
-    set     a0, a1
-    set     a0, absolute(lable)
+    cast    a0, a1
+    cast    a0, absolute(lable)
     place   a0, relative(lable)
-    reset   (z) a0, a1
-    reset   (nz) a0, a1
-    reset   (l) a0, a1
-    reset   (ge) a0, a1
-    reset   (b) a0, a1
-    reset   (ae) a0, a1
+    recast  (z) a0, a1
+    recast  (nz) a0, a1
+    recast  (l) a0, a1
+    recast  (ge) a0, a1
+    recast  (b) a0, a1
+    recast  (ae) a0, a1
     left    a0, 1
     right   a0, 1
     arith   a0, 0x20
