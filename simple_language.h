@@ -73,9 +73,7 @@
 #define compare cmp
 #define negate neg
 #define invert not
-#define move mov
 #define cast mov
-#define set mov
 #define write mov
 #define read mov
 #define left shl
@@ -89,7 +87,6 @@
 #define system syscall
 #define exit sysret
 #define branch(o) j ## o
-#define reset(o) cmov ## o
 #define recast(o) cmov ## o
 #define link(o) lea r11, .L ## o[rip]; jmp o; .L ## o:
 #define swap(r0,r1) xor r0, r1; xor r1, r0; xor r0, r1
