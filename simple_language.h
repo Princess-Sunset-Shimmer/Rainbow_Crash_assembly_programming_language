@@ -88,7 +88,7 @@
 #define exit sysret
 #define branch(o) j ## o
 #define recast(o) cmov ## o
-#define link(o) lea r11, .L ## o[rip]; jmp o; .L ## o:
+#define link(o) lea r11, 5[rip]; jmp o;
 #define swap(r0,r1) xor r0, r1; xor r1, r0; xor r0, r1
 #define clean(o) xor o, o
 #define absolute(o) OFFSET FLAT:o
