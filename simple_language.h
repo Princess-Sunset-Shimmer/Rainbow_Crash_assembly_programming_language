@@ -3,7 +3,6 @@
 #define a2 rsi
 #define a3 rdx
 #define a4 rcx
-#define shamt_full rcx
 #define a5 r8
 #define a6 r9
 #define a7 r10
