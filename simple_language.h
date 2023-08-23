@@ -147,6 +147,8 @@
     recast  (ge) a0, a1
     recast  (b) a0, a1
     recast  (ae) a0, a1
+    switch  (l) a0_byte
+    switch  (b) a0_byte
     left    a0, 1
     right   a0, 1
     arith   a0, 0x20
