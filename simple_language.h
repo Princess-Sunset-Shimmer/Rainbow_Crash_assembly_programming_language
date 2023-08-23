@@ -78,10 +78,11 @@
 #define left shl
 #define right shr
 #define arith sar
-#define jump jmp
+#define jump(o) jmp o;
 #define place lea
 #define carry adc
 #define borrow sbb
+#define switch(o) set ## o
 #define return jmp r11
 #define system syscall
 #define exit sysret
