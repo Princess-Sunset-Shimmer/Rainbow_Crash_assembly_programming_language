@@ -78,11 +78,13 @@
 #define left shl
 #define right shr
 #define arith sar
-#define jump(o) jmp o;
+#define jump jmp
+#define go jmp
 #define place lea
 #define carry adc
 #define borrow sbb
 #define switch(o) set ## o
+#define branch(o) set ## o
 #define return jmp r11
 #define system syscall
 #define exit sysret
@@ -112,6 +114,7 @@
 #define base_sp(o) o[rsp]
 #define begin _start
 #define execute text
+#define unwriteable rodata
 #define block bss
 #define half value
 #define word long
