@@ -114,8 +114,11 @@
 #define base_sp(o) o[rsp]
 #define begin _start
 #define execute text
+#define initialized data
 #define unwriteable rodata
+#define constant rodata
 #define block bss
+#define blank
 #define half value
 #define word long
 #define doub quad
